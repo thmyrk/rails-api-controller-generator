@@ -1,8 +1,9 @@
-# Rails::Api::Controller::Generator
+# rails-api-controller-generator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rails/api/controller/generator`. To experiment with that code, run `bin/console` for an interactive prompt.
+## Description
+This generator is here to speed up the process of you writing boilercode for your rest-api Rails app.
 
-TODO: Delete this and the text above, and describe your gem
+This generator is highly opinionated. It creates files that fit the way I manage my files and directories inside a Rails project. Also, it assumes you are using: `rspec`, `dry-validation`, *use cases pattern* and *presenter pattern*.
 
 ## Installation
 
@@ -16,13 +17,22 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install rails-api-controller-generator
-
 ## Usage
 
-TODO: Write usage instructions here
+In your project root folder execute:
+
+    $ bundle exec rails generate api_controller Model action1 action2
+
+Which will create following files:
+* app/controllers/api/v1/models_controller.rb                                                                                 
+* app/schemas/models_action1_schema.rb                                                                            
+* app/use_cases/models/action1.rb                                                                                 
+* app/schemas/models_action2_schema.rb                                                                            
+* app/use_cases/models/action2.rb                                                                                 
+* app/presenters/model_presenter.rb                                                                               
+* app/presenters/models_presenter.rb                                                                              
+* spec/requests/models_spec.rb
+
 
 ## Development
 
@@ -40,4 +50,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Rails::Api::Controller::Generator project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rails-api-controller-generator/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the rails-api-controller-generator project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rails-api-controller-generator/blob/master/CODE_OF_CONDUCT.md).
