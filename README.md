@@ -10,7 +10,9 @@ This generator is highly opinionated. It creates files that fit the way I manage
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails-api-controller-generator'
+group :development do
+  gem 'rails-api-controller-generator'
+end
 ```
 
 And then execute:
