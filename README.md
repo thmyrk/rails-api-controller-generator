@@ -21,18 +21,24 @@ And then execute:
 
 In your project root folder execute:
 
-    $ bundle exec rails generate api_controller Model action1 action2
+    $ bundle exec rails generate api_controller model_name action1 action2
 
-Which will create following files:
-* app/controllers/api/v1/models_controller.rb                                                                                 
-* app/schemas/models_action1_schema.rb                                                                            
-* app/use_cases/models/action1.rb                                                                                 
-* app/schemas/models_action2_schema.rb                                                                            
-* app/use_cases/models/action2.rb                                                                                 
-* app/presenters/model_presenter.rb                                                                               
-* app/presenters/models_presenter.rb                                                                              
-* spec/requests/models_spec.rb
+So for example running:
 
+    $ bundle exec rails generate api_controller post index create
+
+will create following files:
+* app/controllers/api/v1/posts_controller.rb                                                                                 
+* app/schemas/posts_index_schema.rb                                                                            
+* app/use_cases/posts/index.rb                                                                                 
+* app/schemas/posts_create_schema.rb                                                                            
+* app/use_cases/posts/create.rb                                                                                 
+* app/presenters/post_presenter.rb                                                                               
+* app/presenters/posts_presenter.rb                                                                              
+* spec/requests/posts_spec.rb
+
+Each of these files will be filled with code.
+Model name needs to be singular!
 
 ## Development
 
