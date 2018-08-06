@@ -1,0 +1,18 @@
+module Api
+  module V1
+    class <%= class_name.pluralize %>Controller < ApiController
+<% for action in actions %>
+      def <%= action %>
+        validate_params!(<%= class_name.pluralize %><%= action.classify %>Schema::Schema)
+        UseCases::<%= class_name.pluralize %>::<%= action.classify %>.new(<%= plural_name %>_<%= action %>_params).call
+        render_ok
+      end
+<% end %>
+      private
+
+      def <%= plural_name %>_<%= action %>_params
+        params.permit(:id)
+      end
+    end
+  end
+end
