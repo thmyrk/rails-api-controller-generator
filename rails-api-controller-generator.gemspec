@@ -11,19 +11,13 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Proper rails generator for controller in REST API using RSpec and use_case pattern"
   spec.description   = "Generates: controller file with actions specified in arguments, schema file for param validation written using dry-validation"\
-                       "gem, use case class for handling logic of the request, presenter class for serialization of objects, request rspec specs for"\
-                       "proper testing"
+                       " gem, use case class for handling logic of the request, presenter class for serialization of objects, request rspec specs for"\
+                       " proper testing"
   spec.homepage      = "https://github.com/thmyrk/rails-api-controller-generator"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
