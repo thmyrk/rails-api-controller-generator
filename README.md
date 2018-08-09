@@ -1,9 +1,9 @@
 # rails-api-controller-generator
 
 ## Description
-This generator is here to speed up the process of you writing boilercode for your rest-api Rails app.
+This generator was developed to speed up the process of your boilercode writing in terms of your rest-api Rails app.
 
-This generator is highly opinionated. It creates files that fit the way I manage my files and directories inside a Rails project. Also, it assumes you are using: `rspec`, `dry-validation`, *use cases pattern* and *presenter pattern*.
+The generator itself is highly opinionated. It creates files that fit the way I manage my files and directories inside a Rails project. Also, it assumes you are using: `rspec`, `dry-validation`, *use cases pattern* and *presenter pattern*.
 
 ## Installation
 
@@ -30,13 +30,13 @@ So for example running:
     $ bundle exec rails generate api_controller post index create
 
 will create following files:
-* app/controllers/api/v1/posts_controller.rb                                                                                 
-* app/schemas/posts_index_schema.rb                                                                            
-* app/use_cases/posts/index.rb                                                                                 
-* app/schemas/posts_create_schema.rb                                                                            
-* app/use_cases/posts/create.rb                                                                                 
-* app/presenters/post_presenter.rb                                                                               
-* app/presenters/posts_presenter.rb                                                                              
+* app/controllers/api/v1/posts_controller.rb
+* app/schemas/posts_index_schema.rb
+* app/use_cases/posts/index.rb
+* app/schemas/posts_create_schema.rb
+* app/use_cases/posts/create.rb
+* app/presenters/post_presenter.rb
+* app/presenters/posts_presenter.rb
 * spec/requests/posts_spec.rb
 
 Each of these files will be filled with code.

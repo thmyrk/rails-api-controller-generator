@@ -5,7 +5,7 @@ require "rails/api/controller/generator/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "rails-api-controller-generator"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["thmyrk"]
   spec.email         = ["przemyslaw.piotrowski@atteo.com"]
 
