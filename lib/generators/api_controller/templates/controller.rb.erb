@@ -10,9 +10,11 @@ module Api
 <% end %>
       private
 
+<% for action in actions %>
       def <%= plural_name %>_<%= action %>_params
         params.permit(:id)
       end
+<% end %>
     end
   end
 end

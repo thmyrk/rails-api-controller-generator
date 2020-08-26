@@ -4,8 +4,8 @@ class <%= class_name.pluralize %>Presenter < BasePresenter
   end
 
   def build_many(*representations, **keyword_representations)
-    @<%= plural_name %>.map do |exercise|
-      <%= class_name %>Presenter.new(exercise).build(*representations, keyword_representations)
+    @<%= plural_name %>.map do |<%= singular_name %>|
+      <%= class_name %>Presenter.new(<%= singular_name %>).build(*representations, keyword_representations)
     end
   end
 end
